@@ -9,13 +9,13 @@ public class Main {
     public static void menu() {
         int opcion;
         do{
-            System.out.println("=========================");
+            System.out.println("\n=========================");
             System.out.println("   REGISTRO DE USUARIOS  ");
             System.out.println("=========================");
             System.out.println("1. Registrar usuario");
             System.out.println("2. Salir");
 
-            System.out.print("Seleccione una opción: ");
+            System.out.print("\n|> Seleccione una opción: ");
             opcion = sc.nextInt();
             sc.nextLine();
 

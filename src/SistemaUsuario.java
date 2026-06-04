@@ -9,17 +9,17 @@ public class SistemaUsuario {
 
     public void registrarUsuario(Scanner sc) {
         try{
-            System.out.print("Ingrese el nombre del usuario: ");
+            System.out.print("\n|> Ingrese el nombre del usuario: ");
             String nombre = sc.nextLine();
 
-            System.out.print("Ingrese la edad del usuario: ");
+            System.out.print("|> Ingrese la edad del usuario: ");
             int edad = sc.nextInt();
             sc.nextLine(); 
 
-            System.out.print("Ingrese el correo electrónico del usuario: ");
+            System.out.print("|> Ingrese el correo electrónico del usuario: ");
             String correoElectronico = sc.nextLine();
 
-            System.out.print("Ingrese el salario mensual del usuario: ");
+            System.out.print("|> Ingrese el salario mensual del usuario: ");
             double salarioMensual = sc.nextDouble();
             sc.nextLine();
 
@@ -28,7 +28,7 @@ public class SistemaUsuario {
             UsuarioService.validarUsuario(nuevoUsuario);
 
             usuarios.add(nuevoUsuario);
-            System.out.println("Usuario registrado correctamente.");
+            System.out.println("\nUsuario registrado correctamente.");
         } 
         catch (NombreValidatorException e) {
             System.out.println(e.getMessage());
@@ -43,7 +43,8 @@ public class SistemaUsuario {
             System.out.println(e.getMessage());
         }
         catch (InputMismatchException e) {
-            System.out.println("Error: Debe ingresar un numero valido."); 
+            System.out.println("\nError: Debe ingresar un numero valido."); 
+            sc.nextLine();
         }
         finally {
             System.out.println("Proceso finalizado.");
