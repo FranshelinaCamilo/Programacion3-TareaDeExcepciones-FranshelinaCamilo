@@ -24,22 +24,23 @@ public class SistemaUsuario {
             sc.nextLine();
 
 
-            Usuario nuevoUsuario = new Usuario(nombre, edad, correoElectronico, salarioMensual);
             UsuarioService.validarUsuario(nombre, edad, correoElectronico, salarioMensual);
+
+            Usuario nuevoUsuario = new Usuario(nombre, edad, correoElectronico, salarioMensual);
 
             usuarios.add(nuevoUsuario);
             System.out.println("\nUsuario registrado correctamente.");
         } 
-        catch (NombreValidatorException e) {
+        catch (NombreInvalidoException e) {
             System.out.println(e.getMessage());
         }
-        catch (EdadValidatorException e) {
+        catch (EdadInvalidaException e) {
             System.out.println(e.getMessage());
         }
-        catch (CorreoValidatorException e) {
+        catch (CorreoInvalidoException e) {
             System.out.println(e.getMessage());
         }
-        catch (SalarioValidatorException e) {
+        catch (SalarioInvalidoException e) {
             System.out.println(e.getMessage());
         }
         catch (InputMismatchException e) {
