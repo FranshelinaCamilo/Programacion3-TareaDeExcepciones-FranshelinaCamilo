@@ -19,4 +19,10 @@ public class UsuarioService {
             throw new CorreoValidatorException("El correo electrónico no es válido.");
         }
     }
+
+    public static void validarSalario(double salario) throws SalarioValidatorException {
+        if (salario < 0) {
+            throw new SalarioValidatorException("El salario no puede ser negativo.");
+        }
+    }
 }
