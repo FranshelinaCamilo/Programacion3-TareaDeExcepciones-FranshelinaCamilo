@@ -13,4 +13,10 @@ public class UsuarioService {
             throw new EdadValidatorException("La edad debe ser mayor o igual a 18 años y menor o igual a 100 años.");
         }
     }
+
+    public static void validarCorreoElectronico(String correo) throws CorreoValidatorException {
+        if (!correo.contains("@") || !correo.contains(".") ) {
+            throw new CorreoValidatorException("El correo electrónico no es válido.");
+        }
+    }
 }
