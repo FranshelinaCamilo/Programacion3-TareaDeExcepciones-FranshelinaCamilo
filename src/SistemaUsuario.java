@@ -25,7 +25,7 @@ public class SistemaUsuario {
 
 
             Usuario nuevoUsuario = new Usuario(nombre, edad, correoElectronico, salarioMensual);
-            UsuarioService.validarUsuario(nuevoUsuario);
+            UsuarioService.validarUsuario(nombre, edad, correoElectronico, salarioMensual);
 
             usuarios.add(nuevoUsuario);
             System.out.println("\nUsuario registrado correctamente.");
