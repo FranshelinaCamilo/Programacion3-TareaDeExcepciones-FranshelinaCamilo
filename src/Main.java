@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Main {
-    static Scanner scanner = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         menu();
     }
@@ -16,12 +16,13 @@ public class Main {
             System.out.println("2. Salir");
 
             System.out.print("Seleccione una opción: ");
-            opcion = scanner.nextInt();
-            scanner.nextLine();
+            opcion = sc.nextInt();
+            sc.nextLine();
 
             switch (opcion) {
                 case 1:
-                    //Aqui va el código para registrar un usuario
+                    SistemaUsuario sistemaUsuario = new SistemaUsuario();
+                    sistemaUsuario.registrarUsuario(sc);
                     break;
                 case 2:
                     System.out.println("Saliendo del programa...");
